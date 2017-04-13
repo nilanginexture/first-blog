@@ -1,0 +1,50 @@
+<html>
+  <head>
+
+    <title>Video Streaming Demonstration</title>
+
+<style type="text/css">
+
+.rotateimg90 {
+   transform: rotate(90deg);
+}
+.rotateimg180 {
+   transform: rotate(180deg);
+}
+.rotateimg270 {
+   transform: rotate(270deg);
+}
+
+
+</style>
+
+
+  </head>
+  <body style="background-color: black;">
+    <div align="center">
+    <table style="border:thin;">
+    	<tr><h1 style="color: white; font-size: 100;text-align: center; ">Holo-ference Demonstration</h1></tr>
+    	<tr style="height: 483px">
+    		<td>  </td>
+    		<td><img src="{{ url_for('video_feed') }}" ></td>
+    		<td>  </td>
+   	    </tr>
+    	<tr style="height: 643px">
+    		<td><img src="{{ url_for('video_feed') }}" class="rotateimg270" ></td>
+    		<td>  </td>
+    		<td>
+    		<img src="{{ url_for('video_feed') }}" class="rotateimg90" >
+    		</td>
+    	</tr>
+    	<tr>
+    		<td>  </td>
+    		<td><img src="{{ url_for('video_feed') }}" class="rotateimg180"></td>
+    		<td>  </td>
+    	</tr>
+    
+    
+    </table>
+    </div>
+
+  </body>
+</html>
